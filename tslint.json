@@ -1,0 +1,16 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended"
+  ],
+  "jsRules": {},
+  "rules": {
+    "no-var-requires": false,
+    "no-console": false,
+    "quote": [1, "single"]
+  },
+  "rulesDirectory": [],
+  "files.associations": {
+    "tslint.json": "jsonc"
+  }
+}

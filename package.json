@@ -1,0 +1,47 @@
+{
+  "name": "lerna-preset",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "workspaces": [
+    "packages/@tomieric/*"
+  ],
+  "private": true,
+  "author": "tomieric <tomieric@gmail.com>",
+  "scripts": {
+    "commit": "git add . && git-cz",
+    "bootstrap": "lerna bootstrap && yarn link-all",
+    "deploy": "yarn build && lerna publish --force-publish --yes --conventional-commits -m \"chore(release): publish %s\"",
+    "link-all": "yarn unlink-all && lerna run build && lerna exec --parallel yarn link",
+    "unlink-all": "lerna exec --parallel --bail=false yarn unlink",
+    "clean": "lerna clean"
+  },
+
+  "keywords": ["eslint", "commit-msg"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tomieric/lerna-preset.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
+    "commitizen": "^4.2.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^6.0.0",
+    "lerna": "^4.0.0"
+  }
+}

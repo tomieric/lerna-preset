@@ -1,0 +1,20 @@
+{
+  "packages": [
+    "packages/@tomieric/*"
+  ],
+  "command": {
+    "version": {
+      "message": "chore(release): publish %s"
+    },
+    "bootstrap": {
+      "ignore": "examples/*"
+    },
+    "publish": {
+      "allowBranch": "master",
+      "ignoreChanges": ["*.md"]
+    }
+  },
+  "version": "independent",
+  "npmClient": "yarn",
+  "useWorkspaces": true
+}
