@@ -2,7 +2,7 @@
   "name": "@tomieric/utils",
   "version": "1.0.0",
   "description": "> TODO: description",
-  "author": "邵金洪 <shaojinhong@zj.tech>",
+  "author": "tomieric <tomieric@gmail.com>",
   "homepage": "",
   "license": "MIT",
   "main": "lib/utils.js",
