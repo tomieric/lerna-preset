@@ -3,18 +3,16 @@
     "packages/@tomieric/*"
   ],
   "command": {
-    "version": {
-      "message": "chore(release): publish %s"
-    },
     "bootstrap": {
       "ignore": "examples/*"
     },
     "publish": {
       "allowBranch": "master",
-      "ignoreChanges": ["*.md"]
+      "ignoreChanges": ["*.md"],
+      "message": "chore(release): publish %s"
     }
   },
-  "version": "independent",
+  "version": "1.0.0",
   "npmClient": "yarn",
   "useWorkspaces": true
 }
