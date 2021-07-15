@@ -11,7 +11,7 @@
   "scripts": {
     "commit": "git add . && git-cz",
     "bootstrap": "lerna bootstrap && yarn link-all",
-    "deploy": "yarn build && lerna publish --force-publish --yes --conventional-commits -m \"chore(release): publish %s\"",
+    "deploy": "yarn build && lerna publish --force-publish --yes --conventional-commits",
     "link-all": "yarn unlink-all && lerna run build && lerna exec --parallel yarn link",
     "unlink-all": "lerna exec --parallel --bail=false yarn unlink",
     "clean": "lerna clean"
